@@ -28,6 +28,10 @@ Route::resource('products', ProductController::class);
 // // Creating products routes Post Request
 // Route::post('/products', [ProductController::class, 'store']);
 
+
+// Creating products routes Post Request
+Route::get('/products/search/{name}', [ProductController::class, 'search']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
